@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-500: #3bcfd4;
+  --secondary-color-500: #fc9305;
+  --terciary-color-300: #f64db4;
+  --terciary-color-500: #f20094;
+  --bg-color-300: #1a1b1d;
+  --bg-color-500: #121314;
+  --bg-color-700: #0a0b0c;
+  --text-color-500: #fafafa;
+  --text-color-600: #c8c8c8;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", "Lato", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  color: var(--text-color-600);
+  background-color: var(--bg-color-500);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  color: var(--text-color-500);
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+/*Customize Ant Elements*/
+
+.EventSearchField {
+  width: 100%;
+}
+
+.EventSearchField .ant-select-selector {
+  align-items: center;
+  height: 50px !important;
+  background-color: var(--bg-color-700) !important;
+  border: 1px solid var(--bg-color-500) !important;
+}
+
+.EventSearchField .ant-select-selector input {
+  height: 100% !important;
+  color: var(--text-color-500) !important;
+  font-family: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.EventSearchField .ant-select-selector .ant-select-selection-placeholder {
+  color: var(--text-color-600) !important;
+}
+
+.ant-select-dropdown {
+  background-color: var(--bg-color-300) !important;
+}
+
+.ant-select-item-group {
+  color: var(--text-color-600) !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+}
+
+.ant-select-item-option-content {
+  color: var(--text-color-500) !important;
+}
+
+.ant-select-item-option-active {
+  background-color: var(--bg-color-500) !important;
+}
+
+.EventDatePicker {
+  background-color: var(--bg-color-700);
+  border: none;
+}
+
+.EventDatePicker input {
+  color: var(--text-color-500) !important;
+  font-family: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.EventDatePicker input::placeholder {
+  color: var(--text-color-500) !important;
+}
+.EventDatePicker .ant-picker-active-bar {
+  background-color: var(--secondary-color-500) !important;
+}
+
+.ant-picker-panel-container {
+  background-color: var(--bg-color-500) !important;
+  border: 1px solid var(--bg-color-700);
+}
+
+.ant-picker-body th,
+.ant-picker-cell,
+.ant-picker-header-view {
+  filter: invert() !important;
+  font-family: inherit !important;
+  letter-spacing: inherit !important;
+}
+
+.ant-picker-separator,
+.ant-picker-suffix {
+  color: var(--text-color-500) !important;
+}
+
+.ant-picker-clear {
+  color: var(--text-color-500) !important;
+  background-color: var(--bg-color-700) !important;
+}

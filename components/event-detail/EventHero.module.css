@@ -1,0 +1,26 @@
+.background {
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 0 0;
+  filter: blur(10px);
+}
+
+.featuredImage {
+  display: flex;
+  justify-content: center;
+}
+
+.featuredImage img {
+  margin-top: -205px;
+  max-width: 1200px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0 0 8px 8px;
+  z-index: 1;
+}

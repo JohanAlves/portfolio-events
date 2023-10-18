@@ -1,0 +1,26 @@
+.aboutContainer {
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutContainer {
+    padding-right: 0px;
+    padding-bottom: 30px;
+  }
+}
+
+.backButton {
+  color: inherit;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.backButton svg {
+  width: 16px;
+}
+
+.title {
+  color: var(--text-color-500);
+}

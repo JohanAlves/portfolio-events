@@ -1,0 +1,29 @@
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.summaryCard {
+  background-color: var(--bg-color-700);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.summaryCard svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.cardContent span:nth-child(1) {
+  color: var(--primary-color-500);
+  font-weight: bold;
+}

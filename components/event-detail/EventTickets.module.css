@@ -1,0 +1,119 @@
+.ticketContainer {
+  background-color: var(--bg-color-300);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.ticketContainer button {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+.tickets {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticketInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticketType {
+  font-weight: bold;
+}
+
+.ticketPrice {
+  color: var(--text-color-600);
+  font-size: 14px;
+}
+
+.ticketCount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count {
+  width: 25px;
+  text-align: center;
+}
+
+.plus,
+.minus {
+  font-size: 25px;
+  position: relative;
+  padding: 1px 8px;
+  border-radius: 500px;
+  background-color: var(--bg-color-500);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.plus:hover,
+.minus:hover {
+  transform: scale(1.2);
+}
+
+.plus svg,
+.minus svg {
+  width: 16px;
+  height: 18px;
+  color: var(--primary-color-500);
+}
+
+.minusDisabled,
+.plusDisabled {
+  font-size: 25px;
+  position: relative;
+  padding: 1px 8px;
+  border-radius: 500px;
+  background-color: var(--bg-color-500);
+  opacity: 0.6;
+}
+
+.plusDisabled svg,
+.minusDisabled svg {
+  width: 16px;
+  height: 18px;
+  color: var(--text-color-600);
+}
+
+.subtotalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtotalContainer h4 {
+  color: var(--text-color-600);
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+}
+
+.subtotalContainer span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buyButton {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--terciary-color-500);
+}

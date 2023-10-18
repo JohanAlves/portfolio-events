@@ -1,0 +1,150 @@
+.cardWrapper {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color-300);
+  border-radius: 10px;
+  color: var(--text-color-500);
+  flex: 1;
+}
+
+.item:hover img {
+  filter: brightness(0.5) saturate(0.3);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.3s filter linear;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px;
+  gap: 4px;
+}
+
+.content h2 {
+  font-size: 20px;
+  color: var(--text-color-500);
+  margin: 0;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.day {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-color-500);
+}
+
+.dateBar {
+  font-weight: bold;
+  background-color: var(--primary-color-500);
+  border-radius: 3px;
+  color: var(--bg-color-300);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.month {
+  font-size: 14px;
+}
+
+.year {
+  font-size: 9px;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--terciary-color-300);
+}
+
+.location {
+  font-size: 14px;
+}
+
+.date svg,
+.city svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.shadow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+  border-radius: 20px;
+  overflow: hidden;
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.cardWrapper:hover .shadow {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.shadow::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(
+    rgba(189, 162, 8, 1) 0%,
+    rgba(6, 239, 249, 1) 46%,
+    rgba(255, 10, 184, 1) 100%
+  );
+}
+
+.cardWrapper:hover .shadow::before {
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
