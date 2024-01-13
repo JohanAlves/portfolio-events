@@ -16,7 +16,7 @@ function AllEventsPage(props) {
   function findEventsHandler(search, dateRange) {
     const searchFilter = search ? `&search=${search}` : "";
     const dateRangeFilter =
-      dateRange[0] != null && dateRange[1] != null
+      dateRange && dateRange[0] != null && dateRange[1] != null
         ? `&date=${dateRange[0]}_${dateRange[1]}`
         : "";
     const fullPath = `/events/?${searchFilter}${dateRangeFilter}`;
@@ -77,11 +77,11 @@ function AllEventsPage(props) {
 
 export async function getStaticProps() {
   const allEvents = await getAllEvents();
-
   return {
     props: {
       allEvents,
     },
+    revalidate: 60,
   };
 }
 

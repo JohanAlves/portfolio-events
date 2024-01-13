@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./EventHero.module.css";
 
 function EventHero(props) {
@@ -7,10 +8,10 @@ function EventHero(props) {
   return (
     <>
       <div className={styles.background}>
-        <img src={imageURL} alt={imageAlt} />
+        <Image width={100} height={100} src={imageURL} alt={imageAlt} />
       </div>
       <div className={styles.featuredImage}>
-        <img src={imageURL} alt={imageAlt} />
+        <Image width={1200} height={800} src={imageURL} alt={imageAlt} />
       </div>
     </>
   );

@@ -1,0 +1,72 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.thankyouContainer {
+  background: var(--bg-color-500);
+  min-height: 500px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.thankyouContainer h2 {
+  font-size: 32px;
+}
+
+.thankMsg {
+  font-size: 22px;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ticketsInvoice td,
+.ticketsInvoice th {
+  padding-inline: 10px;
+}
+
+.ticketsInvoice th {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.ticketsInvoice tr:last-child td {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.eventMeta {
+  margin-bottom: 40px;
+}
+
+.eventName {
+  font-size: 20px;
+  color: var(--primary-color-500);
+  margin-bottom: 15px;
+}
+
+.date {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.address {
+  display: flex;
+  gap: 15px;
+}

@@ -2,25 +2,20 @@ import MinusIcon from "../icons/MinusIcon";
 import PlusIcon from "../icons/PlusIcon";
 import styles from "./EventTickets.module.css";
 import Button from "../ui/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function EventTickets(props) {
   const { tickets } = props;
-  const InitialState = createInitialState();
-  const [ticketState, setTicketState] = useState(InitialState);
-  const [subTotal, setSubTotal] = useState(0);
+  const { ticketState } = props;
+  const { setTicketState } = props;
+  const { setSubTotal } = props;
+  const { subTotal } = props;
+  const { setThankyouIsOpen } = props;
 
-  function createInitialState() {
-    let initialState = [];
-    tickets.map((ticket) => {
-      return initialState.push({
-        id: ticket.id,
-        title: ticket.title,
-        price: ticket.price,
-        qty: 0,
-      });
-    });
-    return initialState;
+  const [isInvoice, setIsInvoice] = useState(false);
+
+  function openThankyouPopup() {
+    setThankyouIsOpen(true);
   }
 
   function handleTicketCount(id, action) {
@@ -50,6 +45,11 @@ function EventTickets(props) {
   function getTicketCount(id) {
     return ticketState.find((ticket) => ticket.id === id).qty;
   }
+
+  useEffect(() => {
+    const ticketStateIsEmpty = ticketState.filter((ticket) => ticket.qty > 0);
+    setIsInvoice(ticketStateIsEmpty.length ? true : false);
+  }, [ticketState]);
 
   if (!ticketState) return <p>loading</p>;
 
@@ -90,7 +90,9 @@ function EventTickets(props) {
         <h4>Subtotal</h4>
         <span>${subTotal.toFixed(2)}</span>
       </div>
-      <Button>BUY NOW</Button>
+      <Button disabled={!isInvoice} onClick={openThankyouPopup}>
+        BUY NOW
+      </Button>
     </div>
   );
 }

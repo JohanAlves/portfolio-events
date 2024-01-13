@@ -12,6 +12,12 @@
   transition: all 0.3s;
 }
 
+.btn:disabled {
+  opacity: 0.6;
+  box-shadow: none;
+  pointer-events: none;
+}
+
 .btn:hover,
 .btn:active {
   box-shadow: none;

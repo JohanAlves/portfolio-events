@@ -2,36 +2,43 @@ const DB_URL = process.env.FIREBASE_URL;
 
 export async function getAllEvents() {
   const response = await fetch(DB_URL);
-  const data = await response.json();
-  const formattedData = [];
+  const data = Object.values(await response.json());
 
-  for (const key in data) {
-    formattedData.push(data[key]);
+  for (let i = 0; i < data.length; i++) {
+    const newDate = updateEventsDate(data[i]);
+    data[i].date = newDate;
   }
 
-  return formattedData;
+  return data;
 }
 
 export async function getFeaturedEvents() {
   const response = await fetch(DB_URL + '?orderBy="isFeatured"&equalTo=true');
-  const data = await response.json();
-  const formattedData = [];
+  const data = Object.values(await response.json());
 
-  for (const key in data) {
-    formattedData.push(data[key]);
+  for (let i = 0; i < data.length; i++) {
+    const newDate = updateEventsDate(data[i]);
+    data[i].date = newDate;
   }
 
-  return formattedData;
+  return data;
 }
 
 export async function getEventById(id) {
-  const response = await fetch(`${DB_URL}?orderBy="id"&equalTo=${id}`);
-  const data = await response.json();
-  /* const formattedData = [];
-  
-    for (const key in data) {
-      formattedData.push(data[key]);
-    } */
+  const response = await fetch(DB_URL + `?orderBy="id"&equalTo="${id}"`);
+  const data = Object.values(await response.json());
+
+  for (let i = 0; i < data.length; i++) {
+    const newDate = updateEventsDate(data[i]);
+    data[i].date = newDate;
+  }
 
   return data;
+}
+
+function updateEventsDate(event) {
+  const currentYear = new Date().getFullYear().toString();
+  const newDate = event.date.replace("2023", currentYear);
+
+  return newDate;
 }

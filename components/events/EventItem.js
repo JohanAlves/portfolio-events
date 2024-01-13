@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./EventItem.module.css";
 import AddressIcon from "../icons/AddressIcon";
+import Image from "next/image";
 
 function EventItem(props) {
   const { title, image, date, location, city, id } = props;
@@ -10,7 +11,7 @@ function EventItem(props) {
   return (
     <div className={styles.cardWrapper}>
       <Link className={styles.item} href={exploreLink}>
-        <img src={"/" + image} alt={title} />
+        <Image width={365} height={200} src={"/" + image} alt={title} />
         <div className={styles.contentWrapper}>
           <div className={styles.date}>
             <span className={styles.day}>

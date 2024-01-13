@@ -11,7 +11,11 @@ function Button(props) {
     );
   }
   return (
-    <button onClick={props.onClick} className={styles.btn}>
+    <button
+      disabled={props.disabled}
+      onClick={props.onClick}
+      className={styles.btn}
+    >
       {props.children}
     </button>
   );

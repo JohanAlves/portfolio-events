@@ -3,6 +3,7 @@ import EventItem from "./EventItem";
 
 function EventList(props) {
   const { items } = props;
+
   return (
     <div className={styles.list}>
       {items.map((event) => (

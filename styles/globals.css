@@ -132,3 +132,10 @@ ul {
   color: var(--text-color-500) !important;
   background-color: var(--bg-color-700) !important;
 }
+
+.ant-picker-header-super-next-btn,
+.ant-picker-header-next-btn,
+.ant-picker-header-super-prev-btn,
+.ant-picker-header-prev-btn {
+  color: var(--text-color-500) !important;
+}
