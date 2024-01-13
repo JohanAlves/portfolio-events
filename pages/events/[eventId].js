@@ -1,5 +1,5 @@
 import EventHero from "../../components/event-detail/EventHero";
-import EventContent from "../../components/event-detail/eventContent";
+import EventContent from "../../components/event-detail/EventContent";
 import ErrorAlert from "../../components/ui/ErrorAlert";
 import { getEventById } from "../../util/backend";
 
