@@ -27,7 +27,7 @@ function EventThankyou(props) {
                   <td>
                     {ticket.qty}x {ticket.title}
                   </td>
-                  <td>{ticketPrice}</td>
+                  <td>{ticketPrice.toFixed(2)}</td>
                 </tr>
               );
             }
