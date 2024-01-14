@@ -1,5 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
 import Head from "next/head";
 import MainHeader from "./MainHeader";
 
@@ -11,7 +9,6 @@ function Layout(props) {
       </Head>
       <MainHeader />
       {props.children}
-      <SpeedInsights />
     </>
   );
 }
