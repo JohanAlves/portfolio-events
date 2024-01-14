@@ -4,6 +4,7 @@ import EventList from "../../components/events/EventList";
 import EventsSearch from "../../components/events/EventsSearch";
 import { getAllEvents } from "../../util/backend";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function AllEventsPage(props) {
   const searchParams = useSearchParams();
@@ -69,6 +70,9 @@ function AllEventsPage(props) {
 
   return (
     <div>
+      <Head>
+        <title>All events | Events</title>
+      </Head>
       <EventsSearch onSearch={findEventsHandler} />
       <EventList items={events} />
     </div>

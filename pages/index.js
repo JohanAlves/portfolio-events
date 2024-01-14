@@ -1,3 +1,4 @@
+import Head from "next/head";
 import EventList from "../components/events/EventList";
 import { getFeaturedEvents } from "../util/backend";
 
@@ -6,6 +7,9 @@ function HomePage(props) {
 
   return (
     <div>
+      <Head>
+        <title>Home | Events</title>
+      </Head>
       <EventList items={featuredEvents} />
     </div>
   );
